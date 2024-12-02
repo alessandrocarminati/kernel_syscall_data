@@ -1,0 +1,14 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_clock_adjtime"->"__do_sys_clock_adjtime" [ edgeid = "1"]; 
+"__do_sys_clock_adjtime"->"access_ok_11" [ edgeid = "2"]; 
+"__do_sys_clock_adjtime"->"_copy_from_user_6" [ edgeid = "3"]; 
+"_copy_from_user_6"->"access_ok_11" [ edgeid = "4"]; 
+"_copy_from_user_6"->"__arch_copy_from_user" [ edgeid = "5"]; 
+"_copy_from_user_6"->"memset" [ edgeid = "6"]; 
+"__do_sys_clock_adjtime"->"do_clock_adjtime" [ edgeid = "7"]; 
+"do_clock_adjtime"->"Indirect call0" [ edgeid = "8"]; 
+"do_clock_adjtime"->"clockid_to_kclock" [ edgeid = "9"]; 
+"__do_sys_clock_adjtime"->"__arch_copy_to_user" [ edgeid = "10"]; 
+"__do_sys_clock_adjtime"->"memset" [ edgeid = "11"]; 
+}

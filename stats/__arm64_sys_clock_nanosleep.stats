@@ -1,0 +1,9 @@
+access_ok_10,0
+__arch_copy_from_user,0
+memset,0
+__arm64_sys_clock_nanosleep,8
+Indirect call0,0
+do_no_restart_syscall,0
+clockid_to_kclock,0
+_copy_from_user_5,3
+get_timespec64,4

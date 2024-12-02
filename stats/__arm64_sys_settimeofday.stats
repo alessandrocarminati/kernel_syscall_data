@@ -1,0 +1,58 @@
+memset,0
+__cmpxchg_case_acq_32.constprop.0_6,0
+timekeeping_warp_clock,41
+timespec64_sub,1
+audit_tk_injoffset,1
+blake2s_compress,2
+update_vsyscall_tz,0
+security_settime64,1
+Indirect call2,0
+add_device_randomness,15
+clock_was_set,11
+__raw_spin_lock_irqsave_39,6
+__wake_up_locked_key,2
+timekeeping_forward_now.constprop.0,3
+raw_notifier_call_chain,2
+update_fast_timekeeper,1
+ntp_update_frequency,0
+Indirect call3,0
+memmove,0
+__cmpwait_case_32_1,0
+__raw_spin_unlock_irqrestore.constprop.0,0
+Indirect call4,0
+__kern_my_cpu_offset_27,0
+access_ok_10,0
+tk_xtime.constprop.0,0
+notifier_call_chain,1
+tk_normalize_xtime.constprop.0,0
+__raw_spin_unlock_irqrestore_29,0
+_copy_from_user_5,3
+tk_set_wall_to_mono,1
+do_raw_write_seqcount_end.constprop.0,0
+do_raw_write_seqcount_begin.constprop.0,0
+Indirect call0,0
+do_settimeofday64,53
+update_vsyscall,0
+Indirect call1,0
+arch_local_irq_save_7,0
+do_sys_settimeofday64,72
+__audit_tk_injoffset,0
+ntp_get_next_leap,0
+__wake_up_common,1
+timekeeping_update,10
+_mix_pool_bytes,5
+ntp_clear,1
+__arch_copy_from_user,0
+__raw_spin_lock_irqsave.constprop.0_4,4
+timekeeping_inject_offset,40
+do_raw_spin_lock_80,4
+ktime_mono_to_any,0
+do_raw_spin_lock_55,4
+timespec64_valid_settod,0
+tk_clock_read,1
+queued_spin_lock_slowpath,3
+__raw_spin_lock_irqsave_26,5
+__arm64_sys_settimeofday,78
+set_normalized_timespec64,0
+timerfd_clock_was_set,10
+blake2s_update,4

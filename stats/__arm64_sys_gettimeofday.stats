@@ -1,0 +1,8 @@
+__arm64_sys_gettimeofday,8
+ktime_get_real_ts64,3
+access_ok_10,0
+_copy_to_user_5,2
+timekeeping_get_ns,2
+__arch_copy_to_user,0
+tk_clock_read,1
+Indirect call0,0

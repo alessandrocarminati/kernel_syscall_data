@@ -1,0 +1,18 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_sched_getparam"->"find_process_by_pid" [ edgeid = "1"]; 
+"find_process_by_pid"->"find_task_by_vpid" [ edgeid = "2"]; 
+"find_task_by_vpid"->"task_active_pid_ns" [ edgeid = "3"]; 
+"find_task_by_vpid"->"find_task_by_pid_ns" [ edgeid = "4"]; 
+"find_task_by_pid_ns"->"pid_task" [ edgeid = "5"]; 
+"find_task_by_pid_ns"->"idr_find" [ edgeid = "6"]; 
+"idr_find"->"radix_tree_lookup" [ edgeid = "7"]; 
+"radix_tree_lookup"->"__radix_tree_lookup" [ edgeid = "8"]; 
+"__radix_tree_lookup"->"radix_tree_load_root" [ edgeid = "9"]; 
+"__arm64_sys_sched_getparam"->"_copy_to_user_3" [ edgeid = "10"]; 
+"_copy_to_user_3"->"access_ok_8" [ edgeid = "11"]; 
+"access_ok_8"->"test_ti_thread_flag_7" [ edgeid = "12"]; 
+"_copy_to_user_3"->"__arch_copy_to_user" [ edgeid = "13"]; 
+"__arm64_sys_sched_getparam"->"security_task_getscheduler" [ edgeid = "14"]; 
+"security_task_getscheduler"->"Indirect call0" [ edgeid = "15"]; 
+}

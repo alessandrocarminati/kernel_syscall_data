@@ -1,0 +1,18 @@
+digraph kerncollapsed {
+    "__arch_copy_from_user" [color="black"];
+    "memset" [color="black"];
+    "____core____" [color="kernel"];
+    "__arm64_sys_clock_settime" [color="black"];
+    "Indirect call0" [color="black"];
+    "get_timespec64" [color="black"];
+    "_copy_from_user_5" [color="black"];
+    "access_ok_10" [color="black"];
+    "_copy_from_user_5" -> "__arch_copy_from_user" [color="black"];
+    "_copy_from_user_5" -> "memset" [color="black"];
+    "_copy_from_user_5" -> "access_ok_10" [color="black"];
+    "__arm64_sys_clock_settime" -> "Indirect call0" [color="black"];
+    "__arm64_sys_clock_settime" -> "get_timespec64" [color="black"];
+    "__arm64_sys_clock_settime" -> "____core____" [color="black"];
+    "get_timespec64" -> "_copy_from_user_5" [color="black"];
+}
+

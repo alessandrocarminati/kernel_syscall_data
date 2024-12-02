@@ -1,0 +1,4 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_ni_syscall"->"compat_sys_old_shmctl" [ edgeid = "1"]; 
+}

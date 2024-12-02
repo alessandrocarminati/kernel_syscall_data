@@ -1,0 +1,9 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_clock_getres"->"Indirect call0" [ edgeid = "1"]; 
+"__arm64_sys_clock_getres"->"put_timespec64" [ edgeid = "2"]; 
+"put_timespec64"->"_copy_to_user_5" [ edgeid = "3"]; 
+"_copy_to_user_5"->"access_ok_10" [ edgeid = "4"]; 
+"_copy_to_user_5"->"__arch_copy_to_user" [ edgeid = "5"]; 
+"__arm64_sys_clock_getres"->"clockid_to_kclock" [ edgeid = "6"]; 
+}

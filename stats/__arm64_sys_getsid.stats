@@ -1,0 +1,13 @@
+__arm64_sys_getsid,13
+pid_vnr,2
+security_task_getsid,1
+pid_nr_ns,0
+task_active_pid_ns,0
+find_task_by_pid_ns,5
+Indirect call0,0
+pid_task,0
+radix_tree_lookup,2
+__radix_tree_lookup,1
+find_task_by_vpid,7
+idr_find,3
+radix_tree_load_root,0

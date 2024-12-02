@@ -1,0 +1,6 @@
+digraph kerncollapsed {
+    "__arm64_sys_getcpu" [color="black"];
+    "____core____" [color="kernel"];
+    "__arm64_sys_getcpu" -> "____core____" [color="black"];
+}
+

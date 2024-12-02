@@ -1,0 +1,4 @@
+digraph kerncollapsed {
+    "____core____" [color="kernel"];
+}
+

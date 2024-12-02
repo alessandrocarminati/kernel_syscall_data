@@ -1,0 +1,20 @@
+digraph kerncollapsed {
+    "do_no_restart_syscall" [color="black"];
+    "get_timespec64" [color="black"];
+    "_copy_from_user_5" [color="black"];
+    "__arch_copy_from_user" [color="black"];
+    "____core____" [color="kernel"];
+    "memset" [color="black"];
+    "__arm64_sys_clock_nanosleep" [color="black"];
+    "clockid_to_kclock" [color="black"];
+    "Indirect call0" [color="black"];
+    "__arm64_sys_clock_nanosleep" -> "Indirect call0" [color="black"];
+    "__arm64_sys_clock_nanosleep" -> "do_no_restart_syscall" [color="black"];
+    "__arm64_sys_clock_nanosleep" -> "get_timespec64" [color="black"];
+    "__arm64_sys_clock_nanosleep" -> "clockid_to_kclock" [color="black"];
+    "get_timespec64" -> "_copy_from_user_5" [color="black"];
+    "_copy_from_user_5" -> "____core____" [color="black"];
+    "_copy_from_user_5" -> "__arch_copy_from_user" [color="black"];
+    "_copy_from_user_5" -> "memset" [color="black"];
+}
+

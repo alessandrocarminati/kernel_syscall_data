@@ -1,0 +1,35 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_sched_rr_get_interval"->"Indirect call0" [ edgeid = "1"]; 
+"__arm64_sys_sched_rr_get_interval"->"task_rq_unlock" [ edgeid = "2"]; 
+"task_rq_unlock"->"__raw_spin_unlock_irqrestore_2" [ edgeid = "3"]; 
+"__arm64_sys_sched_rr_get_interval"->"find_process_by_pid" [ edgeid = "4"]; 
+"find_process_by_pid"->"find_task_by_vpid" [ edgeid = "5"]; 
+"find_task_by_vpid"->"task_active_pid_ns" [ edgeid = "6"]; 
+"find_task_by_vpid"->"find_task_by_pid_ns" [ edgeid = "7"]; 
+"find_task_by_pid_ns"->"pid_task" [ edgeid = "8"]; 
+"find_task_by_pid_ns"->"idr_find" [ edgeid = "9"]; 
+"idr_find"->"radix_tree_lookup" [ edgeid = "10"]; 
+"radix_tree_lookup"->"__radix_tree_lookup" [ edgeid = "11"]; 
+"__radix_tree_lookup"->"radix_tree_load_root" [ edgeid = "12"]; 
+"__arm64_sys_sched_rr_get_interval"->"task_rq_lock" [ edgeid = "13"]; 
+"task_rq_lock"->"__raw_spin_unlock_irqrestore_2" [ edgeid = "14"]; 
+"task_rq_lock"->"__raw_spin_lock_irqsave_3" [ edgeid = "15"]; 
+"__raw_spin_lock_irqsave_3"->"arch_local_irq_save_1" [ edgeid = "16"]; 
+"__raw_spin_lock_irqsave_3"->"do_raw_spin_lock_9" [ edgeid = "17"]; 
+"do_raw_spin_lock_9"->"__cmpxchg_case_acq_32" [ edgeid = "18"]; 
+"do_raw_spin_lock_9"->"queued_spin_lock_slowpath" [ edgeid = "19"]; 
+"queued_spin_lock_slowpath"->"__cmpwait_case_32_1" [ edgeid = "20"]; 
+"queued_spin_lock_slowpath"->"__kern_my_cpu_offset_27" [ edgeid = "21"]; 
+"queued_spin_lock_slowpath"->"__cmpxchg_case_acq_32.constprop.0_6" [ edgeid = "22"]; 
+"task_rq_lock"->"raw_spin_rq_lock" [ edgeid = "23"]; 
+"raw_spin_rq_lock"->"raw_spin_rq_lock_nested" [ edgeid = "24"]; 
+"raw_spin_rq_lock_nested"->"do_raw_spin_lock_9" [ edgeid = "25"]; 
+"__arm64_sys_sched_rr_get_interval"->"jiffies_to_timespec64" [ edgeid = "26"]; 
+"__arm64_sys_sched_rr_get_interval"->"put_timespec64" [ edgeid = "27"]; 
+"put_timespec64"->"_copy_to_user_5" [ edgeid = "28"]; 
+"_copy_to_user_5"->"access_ok_10" [ edgeid = "29"]; 
+"_copy_to_user_5"->"__arch_copy_to_user" [ edgeid = "30"]; 
+"__arm64_sys_sched_rr_get_interval"->"security_task_getscheduler" [ edgeid = "31"]; 
+"security_task_getscheduler"->"Indirect call1" [ edgeid = "32"]; 
+}

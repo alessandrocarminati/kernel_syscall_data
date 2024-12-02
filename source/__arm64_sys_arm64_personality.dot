@@ -1,0 +1,9 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_arm64_personality"->"read_sanitised_ftr_reg" [ edgeid = "1"]; 
+"read_sanitised_ftr_reg"->"get_arm64_ftr_reg" [ edgeid = "2"]; 
+"get_arm64_ftr_reg"->"get_arm64_ftr_reg_nowarn" [ edgeid = "3"]; 
+"get_arm64_ftr_reg_nowarn"->"search_cmp_ftr_reg" [ edgeid = "4"]; 
+"get_arm64_ftr_reg_nowarn"->"bsearch" [ edgeid = "5"]; 
+"bsearch"->"Indirect call0" [ edgeid = "6"]; 
+}

@@ -1,0 +1,5 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_io_setup"->"access_ok_30" [ edgeid = "1"]; 
+"access_ok_30"->"test_ti_thread_flag_18" [ edgeid = "2"]; 
+}

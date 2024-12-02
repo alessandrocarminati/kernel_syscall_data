@@ -1,0 +1,10 @@
+__raw_spin_lock_irqsave_17,5
+do_raw_spin_lock_28,4
+__cmpwait_case_32_1,0
+__cmpxchg_case_acq_32.constprop.0_6,0
+__arm64_sys_timer_getoverrun,10
+__raw_spin_unlock_irqrestore_14,0
+__lock_timer,8
+__posix_timers_find,0
+queued_spin_lock_slowpath,3
+__kern_my_cpu_offset_27,0

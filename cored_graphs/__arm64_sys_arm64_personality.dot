@@ -1,0 +1,16 @@
+digraph kerncollapsed {
+    "read_sanitised_ftr_reg" [color="black"];
+    "get_arm64_ftr_reg" [color="black"];
+    "get_arm64_ftr_reg_nowarn" [color="black"];
+    "____core____" [color="kernel"];
+    "search_cmp_ftr_reg" [color="black"];
+    "bsearch" [color="black"];
+    "__arm64_sys_arm64_personality" [color="black"];
+    "get_arm64_ftr_reg" -> "get_arm64_ftr_reg_nowarn" [color="black"];
+    "get_arm64_ftr_reg_nowarn" -> "search_cmp_ftr_reg" [color="black"];
+    "get_arm64_ftr_reg_nowarn" -> "bsearch" [color="black"];
+    "bsearch" -> "____core____" [color="black"];
+    "__arm64_sys_arm64_personality" -> "read_sanitised_ftr_reg" [color="black"];
+    "read_sanitised_ftr_reg" -> "get_arm64_ftr_reg" [color="black"];
+}
+

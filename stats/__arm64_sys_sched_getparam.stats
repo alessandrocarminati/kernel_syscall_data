@@ -1,0 +1,16 @@
+__radix_tree_lookup,1
+__arm64_sys_sched_getparam,15
+find_task_by_pid_ns,5
+radix_tree_lookup,2
+Indirect call0,0
+task_active_pid_ns,0
+_copy_to_user_3,3
+security_task_getscheduler,1
+find_task_by_vpid,7
+find_process_by_pid,8
+test_ti_thread_flag_7,0
+idr_find,3
+radix_tree_load_root,0
+__arch_copy_to_user,0
+access_ok_8,1
+pid_task,0

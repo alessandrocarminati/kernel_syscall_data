@@ -1,0 +1,31 @@
+jiffies_to_timespec64,0
+arch_local_irq_save_1,0
+idr_find,3
+radix_tree_lookup,2
+task_rq_lock,12
+__arch_copy_to_user,0
+queued_spin_lock_slowpath,3
+__raw_spin_unlock_irqrestore_2,0
+__raw_spin_lock_irqsave_3,7
+Indirect call1,0
+pid_task,0
+__radix_tree_lookup,1
+find_task_by_vpid,7
+security_task_getscheduler,1
+raw_spin_rq_lock,7
+__arm64_sys_sched_rr_get_interval,32
+radix_tree_load_root,0
+raw_spin_rq_lock_nested,6
+task_active_pid_ns,0
+__cmpxchg_case_acq_32.constprop.0_6,0
+task_rq_unlock,1
+put_timespec64,3
+do_raw_spin_lock_9,5
+access_ok_10,0
+__cmpxchg_case_acq_32,0
+Indirect call0,0
+_copy_to_user_5,2
+find_task_by_pid_ns,5
+__cmpwait_case_32_1,0
+__kern_my_cpu_offset_27,0
+find_process_by_pid,8

@@ -1,0 +1,35 @@
+digraph kerncollapsed {
+    "__raw_spin_lock_irqsave_17" [color="black"];
+    "queued_spin_lock_slowpath" [color="black"];
+    "__lock_timer" [color="black"];
+    "__cmpxchg_case_acq_32.constprop.0_6" [color="black"];
+    "__arm64_sys_timer_gettime" [color="black"];
+    "__arch_copy_to_user" [color="black"];
+    "put_timespec64" [color="black"];
+    "_copy_to_user_5" [color="black"];
+    "__cmpwait_case_32_1" [color="black"];
+    "access_ok_10" [color="black"];
+    "put_itimerspec64" [color="black"];
+    "____core____" [color="kernel"];
+    "__posix_timers_find" [color="black"];
+    "__kern_my_cpu_offset_27" [color="black"];
+    "__raw_spin_unlock_irqrestore_14" [color="black"];
+    "do_raw_spin_lock_28" [color="black"];
+    "do_raw_spin_lock_28" -> "queued_spin_lock_slowpath" [color="black"];
+    "queued_spin_lock_slowpath" -> "__kern_my_cpu_offset_27" [color="black"];
+    "queued_spin_lock_slowpath" -> "__cmpxchg_case_acq_32.constprop.0_6" [color="black"];
+    "queued_spin_lock_slowpath" -> "__cmpwait_case_32_1" [color="black"];
+    "__arm64_sys_timer_gettime" -> "__raw_spin_unlock_irqrestore_14" [color="black"];
+    "__arm64_sys_timer_gettime" -> "__lock_timer" [color="black"];
+    "__arm64_sys_timer_gettime" -> "____core____" [color="black"];
+    "__arm64_sys_timer_gettime" -> "put_itimerspec64" [color="black"];
+    "put_itimerspec64" -> "put_timespec64" [color="black"];
+    "put_timespec64" -> "_copy_to_user_5" [color="black"];
+    "_copy_to_user_5" -> "access_ok_10" [color="black"];
+    "_copy_to_user_5" -> "__arch_copy_to_user" [color="black"];
+    "__lock_timer" -> "__raw_spin_lock_irqsave_17" [color="black"];
+    "__lock_timer" -> "__raw_spin_unlock_irqrestore_14" [color="black"];
+    "__lock_timer" -> "__posix_timers_find" [color="black"];
+    "__raw_spin_lock_irqsave_17" -> "do_raw_spin_lock_28" [color="black"];
+}
+

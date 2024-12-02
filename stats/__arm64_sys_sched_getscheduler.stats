@@ -1,0 +1,12 @@
+find_task_by_pid_ns,5
+pid_task,0
+__radix_tree_lookup,1
+security_task_getscheduler,1
+Indirect call0,0
+find_task_by_vpid,7
+task_active_pid_ns,0
+idr_find,3
+radix_tree_lookup,2
+radix_tree_load_root,0
+__arm64_sys_sched_getscheduler,11
+find_process_by_pid,8

@@ -1,0 +1,26 @@
+digraph kerncollapsed {
+    "____core____" [color="kernel"];
+    "task_active_pid_ns" [color="black"];
+    "find_task_by_pid_ns" [color="black"];
+    "pid_task" [color="black"];
+    "find_process_by_pid" [color="black"];
+    "idr_find" [color="black"];
+    "__radix_tree_lookup" [color="black"];
+    "Indirect call0" [color="black"];
+    "find_task_by_vpid" [color="black"];
+    "radix_tree_lookup" [color="black"];
+    "security_task_getscheduler" [color="black"];
+    "__arm64_sys_sched_getscheduler" [color="black"];
+    "security_task_getscheduler" -> "Indirect call0" [color="black"];
+    "__arm64_sys_sched_getscheduler" -> "find_process_by_pid" [color="black"];
+    "__arm64_sys_sched_getscheduler" -> "security_task_getscheduler" [color="black"];
+    "find_process_by_pid" -> "find_task_by_vpid" [color="black"];
+    "find_task_by_vpid" -> "task_active_pid_ns" [color="black"];
+    "find_task_by_vpid" -> "find_task_by_pid_ns" [color="black"];
+    "find_task_by_pid_ns" -> "pid_task" [color="black"];
+    "find_task_by_pid_ns" -> "idr_find" [color="black"];
+    "idr_find" -> "radix_tree_lookup" [color="black"];
+    "radix_tree_lookup" -> "__radix_tree_lookup" [color="black"];
+    "__radix_tree_lookup" -> "____core____" [color="black"];
+}
+

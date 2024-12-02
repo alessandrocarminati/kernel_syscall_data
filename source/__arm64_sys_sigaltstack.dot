@@ -1,0 +1,13 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_sigaltstack"->"_copy_from_user_2" [ edgeid = "1"]; 
+"_copy_from_user_2"->"access_ok_6" [ edgeid = "2"]; 
+"access_ok_6"->"test_ti_thread_flag_6" [ edgeid = "3"]; 
+"_copy_from_user_2"->"__arch_copy_from_user" [ edgeid = "4"]; 
+"_copy_from_user_2"->"memset" [ edgeid = "5"]; 
+"__arm64_sys_sigaltstack"->"_copy_to_user_1" [ edgeid = "6"]; 
+"_copy_to_user_1"->"access_ok_6" [ edgeid = "7"]; 
+"_copy_to_user_1"->"__arch_copy_to_user" [ edgeid = "8"]; 
+"__arm64_sys_sigaltstack"->"do_sigaltstack.constprop.0" [ edgeid = "9"]; 
+"do_sigaltstack.constprop.0"->"on_sig_stack" [ edgeid = "10"]; 
+}

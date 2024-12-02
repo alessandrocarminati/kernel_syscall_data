@@ -1,0 +1,20 @@
+digraph kerncollapsed {
+    "Indirect call0" [color="black"];
+    "__kern_my_cpu_offset_65" [color="black"];
+    "__percpu_add_case_64_5" [color="black"];
+    "__arm64_sys_io_submit" [color="black"];
+    "access_ok_30" [color="black"];
+    "____core____" [color="kernel"];
+    "lookup_ioctx" [color="black"];
+    "percpu_ref_put" [color="black"];
+    "percpu_ref_put" -> "Indirect call0" [color="black"];
+    "percpu_ref_put" -> "__kern_my_cpu_offset_65" [color="black"];
+    "percpu_ref_put" -> "__percpu_add_case_64_5" [color="black"];
+    "__percpu_add_case_64_5" -> "__percpu_add_case_64_5" [color="black"];
+    "__arm64_sys_io_submit" -> "access_ok_30" [color="black"];
+    "__arm64_sys_io_submit" -> "lookup_ioctx" [color="black"];
+    "__arm64_sys_io_submit" -> "percpu_ref_put" [color="black"];
+    "access_ok_30" -> "____core____" [color="black"];
+    "lookup_ioctx" -> "access_ok_30" [color="black"];
+}
+

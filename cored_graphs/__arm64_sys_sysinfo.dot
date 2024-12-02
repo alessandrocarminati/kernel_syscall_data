@@ -1,0 +1,28 @@
+digraph kerncollapsed {
+    "Indirect call0" [color="black"];
+    "__arm64_sys_sysinfo" [color="black"];
+    "access_ok_7" [color="black"];
+    "si_meminfo" [color="black"];
+    "____core____" [color="kernel"];
+    "memset" [color="black"];
+    "_copy_to_user_2" [color="black"];
+    "__arch_copy_to_user" [color="black"];
+    "ktime_get_with_offset" [color="black"];
+    "timekeeping_get_ns" [color="black"];
+    "tk_clock_read" [color="black"];
+    "__do_sys_sysinfo" [color="black"];
+    "ns_to_timespec64" [color="black"];
+    "tk_clock_read" -> "Indirect call0" [color="black"];
+    "__arm64_sys_sysinfo" -> "__do_sys_sysinfo" [color="black"];
+    "__do_sys_sysinfo" -> "_copy_to_user_2" [color="black"];
+    "__do_sys_sysinfo" -> "____core____" [color="black"];
+    "__do_sys_sysinfo" -> "ns_to_timespec64" [color="black"];
+    "__do_sys_sysinfo" -> "ktime_get_with_offset" [color="black"];
+    "__do_sys_sysinfo" -> "si_meminfo" [color="black"];
+    "__do_sys_sysinfo" -> "memset" [color="black"];
+    "_copy_to_user_2" -> "__arch_copy_to_user" [color="black"];
+    "_copy_to_user_2" -> "access_ok_7" [color="black"];
+    "ktime_get_with_offset" -> "timekeeping_get_ns" [color="black"];
+    "timekeeping_get_ns" -> "tk_clock_read" [color="black"];
+}
+

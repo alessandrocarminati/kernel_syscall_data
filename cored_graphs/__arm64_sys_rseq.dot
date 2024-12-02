@@ -1,0 +1,6 @@
+digraph kerncollapsed {
+    "__arm64_sys_rseq" [color="black"];
+    "____core____" [color="kernel"];
+    "__arm64_sys_rseq" -> "____core____" [color="black"];
+}
+

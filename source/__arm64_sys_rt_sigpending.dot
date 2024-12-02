@@ -1,0 +1,14 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_rt_sigpending"->"__raw_spin_unlock_irq_3" [ edgeid = "1"]; 
+"__arm64_sys_rt_sigpending"->"_copy_to_user_1" [ edgeid = "2"]; 
+"_copy_to_user_1"->"access_ok_6" [ edgeid = "3"]; 
+"access_ok_6"->"test_ti_thread_flag_6" [ edgeid = "4"]; 
+"_copy_to_user_1"->"__arch_copy_to_user" [ edgeid = "5"]; 
+"__arm64_sys_rt_sigpending"->"__raw_spin_lock_irq_3" [ edgeid = "6"]; 
+"__raw_spin_lock_irq_3"->"do_raw_spin_lock_3" [ edgeid = "7"]; 
+"do_raw_spin_lock_3"->"queued_spin_lock_slowpath" [ edgeid = "8"]; 
+"queued_spin_lock_slowpath"->"__cmpwait_case_32_1" [ edgeid = "9"]; 
+"queued_spin_lock_slowpath"->"__kern_my_cpu_offset_27" [ edgeid = "10"]; 
+"queued_spin_lock_slowpath"->"__cmpxchg_case_acq_32.constprop.0_6" [ edgeid = "11"]; 
+}

@@ -1,0 +1,6 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_sched_setattr"->"access_ok_8" [ edgeid = "1"]; 
+"access_ok_8"->"test_ti_thread_flag_7" [ edgeid = "2"]; 
+"__arm64_sys_sched_setattr"->"memset" [ edgeid = "3"]; 
+}

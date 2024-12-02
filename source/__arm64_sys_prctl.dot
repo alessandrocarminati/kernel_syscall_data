@@ -1,0 +1,8 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_prctl"->"_copy_to_user_2" [ edgeid = "1"]; 
+"_copy_to_user_2"->"access_ok_7" [ edgeid = "2"]; 
+"_copy_to_user_2"->"__arch_copy_to_user" [ edgeid = "3"]; 
+"__arm64_sys_prctl"->"security_task_prctl" [ edgeid = "4"]; 
+"security_task_prctl"->"Indirect call0" [ edgeid = "5"]; 
+}

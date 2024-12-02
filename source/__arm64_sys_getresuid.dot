@@ -1,0 +1,4 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_getresuid"->"access_ok_7" [ edgeid = "1"]; 
+}

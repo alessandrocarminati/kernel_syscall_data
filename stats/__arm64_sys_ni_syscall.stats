@@ -1,0 +1,2 @@
+__arm64_sys_ni_syscall,1
+compat_sys_old_shmctl,0

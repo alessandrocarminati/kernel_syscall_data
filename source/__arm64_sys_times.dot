@@ -1,0 +1,41 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_times"->"_copy_to_user_2" [ edgeid = "1"]; 
+"_copy_to_user_2"->"access_ok_7" [ edgeid = "2"]; 
+"_copy_to_user_2"->"__arch_copy_to_user" [ edgeid = "3"]; 
+"__arm64_sys_times"->"thread_group_cputime_adjusted" [ edgeid = "4"]; 
+"thread_group_cputime_adjusted"->"thread_group_cputime" [ edgeid = "5"]; 
+"thread_group_cputime"->"task_sched_runtime" [ edgeid = "6"]; 
+"task_sched_runtime"->"Indirect call0" [ edgeid = "7"]; 
+"task_sched_runtime"->"task_rq_unlock" [ edgeid = "8"]; 
+"task_rq_unlock"->"__raw_spin_unlock_irqrestore_2" [ edgeid = "9"]; 
+"task_sched_runtime"->"task_rq_lock" [ edgeid = "10"]; 
+"task_rq_lock"->"__raw_spin_unlock_irqrestore_2" [ edgeid = "11"]; 
+"task_rq_lock"->"__raw_spin_lock_irqsave_3" [ edgeid = "12"]; 
+"__raw_spin_lock_irqsave_3"->"arch_local_irq_save_1" [ edgeid = "13"]; 
+"__raw_spin_lock_irqsave_3"->"do_raw_spin_lock_9" [ edgeid = "14"]; 
+"do_raw_spin_lock_9"->"__cmpxchg_case_acq_32" [ edgeid = "15"]; 
+"do_raw_spin_lock_9"->"queued_spin_lock_slowpath" [ edgeid = "16"]; 
+"queued_spin_lock_slowpath"->"__cmpwait_case_32_1" [ edgeid = "17"]; 
+"queued_spin_lock_slowpath"->"__kern_my_cpu_offset_27" [ edgeid = "18"]; 
+"queued_spin_lock_slowpath"->"__cmpxchg_case_acq_32.constprop.0_6" [ edgeid = "19"]; 
+"task_rq_lock"->"raw_spin_rq_lock" [ edgeid = "20"]; 
+"raw_spin_rq_lock"->"raw_spin_rq_lock_nested" [ edgeid = "21"]; 
+"raw_spin_rq_lock_nested"->"do_raw_spin_lock_9" [ edgeid = "22"]; 
+"task_sched_runtime"->"update_rq_clock" [ edgeid = "23"]; 
+"update_rq_clock"->"sched_clock_cpu" [ edgeid = "24"]; 
+"sched_clock_cpu"->"sched_clock" [ edgeid = "25"]; 
+"sched_clock"->"sched_clock_noinstr" [ edgeid = "26"]; 
+"sched_clock_noinstr"->"Indirect call1" [ edgeid = "27"]; 
+"thread_group_cputime"->"__raw_spin_unlock_irqrestore_3" [ edgeid = "28"]; 
+"thread_group_cputime"->"__raw_spin_lock_irqsave_4" [ edgeid = "29"]; 
+"__raw_spin_lock_irqsave_4"->"do_raw_spin_lock_11" [ edgeid = "30"]; 
+"do_raw_spin_lock_11"->"__cmpxchg_case_acq_32.constprop.0_5" [ edgeid = "31"]; 
+"do_raw_spin_lock_11"->"queued_spin_lock_slowpath" [ edgeid = "32"]; 
+"thread_group_cputime_adjusted"->"cputime_adjust" [ edgeid = "33"]; 
+"cputime_adjust"->"__raw_spin_unlock_irqrestore_3" [ edgeid = "34"]; 
+"cputime_adjust"->"__raw_spin_lock_irqsave_4" [ edgeid = "35"]; 
+"cputime_adjust"->"mul_u64_u64_div_u64" [ edgeid = "36"]; 
+"__arm64_sys_times"->"jiffies_64_to_clock_t" [ edgeid = "37"]; 
+"__arm64_sys_times"->"nsec_to_clock_t" [ edgeid = "38"]; 
+}

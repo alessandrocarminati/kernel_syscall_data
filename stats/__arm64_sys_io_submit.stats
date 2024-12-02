@@ -1,0 +1,8 @@
+access_ok_30,1
+lookup_ioctx,2
+Indirect call0,0
+__kern_my_cpu_offset_65,0
+__percpu_add_case_64_5,1
+test_ti_thread_flag_18,0
+__arm64_sys_io_submit,9
+percpu_ref_put,4

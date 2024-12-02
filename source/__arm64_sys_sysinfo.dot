@@ -1,0 +1,15 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_sysinfo"->"__do_sys_sysinfo" [ edgeid = "1"]; 
+"__do_sys_sysinfo"->"_copy_to_user_2" [ edgeid = "2"]; 
+"_copy_to_user_2"->"access_ok_7" [ edgeid = "3"]; 
+"_copy_to_user_2"->"__arch_copy_to_user" [ edgeid = "4"]; 
+"__do_sys_sysinfo"->"get_avenrun" [ edgeid = "5"]; 
+"__do_sys_sysinfo"->"ns_to_timespec64" [ edgeid = "6"]; 
+"__do_sys_sysinfo"->"ktime_get_with_offset" [ edgeid = "7"]; 
+"ktime_get_with_offset"->"timekeeping_get_ns" [ edgeid = "8"]; 
+"timekeeping_get_ns"->"tk_clock_read" [ edgeid = "9"]; 
+"tk_clock_read"->"Indirect call0" [ edgeid = "10"]; 
+"__do_sys_sysinfo"->"si_meminfo" [ edgeid = "11"]; 
+"__do_sys_sysinfo"->"memset" [ edgeid = "12"]; 
+}

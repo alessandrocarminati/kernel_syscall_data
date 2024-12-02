@@ -1,0 +1,7 @@
+bsearch,1
+Indirect call0,0
+__arm64_sys_arm64_personality,6
+read_sanitised_ftr_reg,5
+get_arm64_ftr_reg,4
+get_arm64_ftr_reg_nowarn,3
+search_cmp_ftr_reg,0

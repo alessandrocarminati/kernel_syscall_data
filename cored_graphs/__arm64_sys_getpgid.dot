@@ -1,0 +1,29 @@
+digraph kerncollapsed {
+    "Indirect call0" [color="black"];
+    "__arm64_sys_getpgid" [color="black"];
+    "task_active_pid_ns" [color="black"];
+    "____core____" [color="kernel"];
+    "find_task_by_vpid" [color="black"];
+    "idr_find" [color="black"];
+    "__radix_tree_lookup" [color="black"];
+    "pid_task" [color="black"];
+    "security_task_getpgid" [color="black"];
+    "find_task_by_pid_ns" [color="black"];
+    "radix_tree_load_root" [color="black"];
+    "pid_vnr" [color="black"];
+    "radix_tree_lookup" [color="black"];
+    "security_task_getpgid" -> "Indirect call0" [color="black"];
+    "__arm64_sys_getpgid" -> "pid_vnr" [color="black"];
+    "__arm64_sys_getpgid" -> "find_task_by_vpid" [color="black"];
+    "__arm64_sys_getpgid" -> "security_task_getpgid" [color="black"];
+    "pid_vnr" -> "____core____" [color="black"];
+    "pid_vnr" -> "task_active_pid_ns" [color="black"];
+    "find_task_by_vpid" -> "task_active_pid_ns" [color="black"];
+    "find_task_by_vpid" -> "find_task_by_pid_ns" [color="black"];
+    "find_task_by_pid_ns" -> "idr_find" [color="black"];
+    "find_task_by_pid_ns" -> "pid_task" [color="black"];
+    "idr_find" -> "radix_tree_lookup" [color="black"];
+    "radix_tree_lookup" -> "__radix_tree_lookup" [color="black"];
+    "__radix_tree_lookup" -> "radix_tree_load_root" [color="black"];
+}
+

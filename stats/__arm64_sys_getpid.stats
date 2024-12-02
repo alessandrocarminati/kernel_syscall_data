@@ -1,0 +1,4 @@
+__arm64_sys_getpid,3
+__task_pid_nr_ns,2
+pid_nr_ns,0
+task_active_pid_ns,0

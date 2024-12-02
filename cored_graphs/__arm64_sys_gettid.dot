@@ -1,0 +1,10 @@
+digraph kerncollapsed {
+    "task_active_pid_ns" [color="black"];
+    "____core____" [color="kernel"];
+    "__arm64_sys_gettid" [color="black"];
+    "__task_pid_nr_ns" [color="black"];
+    "__arm64_sys_gettid" -> "__task_pid_nr_ns" [color="black"];
+    "__task_pid_nr_ns" -> "____core____" [color="black"];
+    "__task_pid_nr_ns" -> "task_active_pid_ns" [color="black"];
+}
+

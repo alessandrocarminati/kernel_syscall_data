@@ -1,0 +1,19 @@
+digraph kerncollapsed {
+    "__arch_copy_to_user" [color="black"];
+    "____core____" [color="kernel"];
+    "ktime_get_real_ts64" [color="black"];
+    "timekeeping_get_ns" [color="black"];
+    "tk_clock_read" [color="black"];
+    "Indirect call0" [color="black"];
+    "__arm64_sys_gettimeofday" [color="black"];
+    "_copy_to_user_5" [color="black"];
+    "ktime_get_real_ts64" -> "timekeeping_get_ns" [color="black"];
+    "timekeeping_get_ns" -> "tk_clock_read" [color="black"];
+    "tk_clock_read" -> "Indirect call0" [color="black"];
+    "__arm64_sys_gettimeofday" -> "____core____" [color="black"];
+    "__arm64_sys_gettimeofday" -> "_copy_to_user_5" [color="black"];
+    "__arm64_sys_gettimeofday" -> "ktime_get_real_ts64" [color="black"];
+    "_copy_to_user_5" -> "__arch_copy_to_user" [color="black"];
+    "_copy_to_user_5" -> "____core____" [color="black"];
+}
+

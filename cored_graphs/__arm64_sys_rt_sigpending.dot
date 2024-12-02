@@ -1,0 +1,26 @@
+digraph kerncollapsed {
+    "__kern_my_cpu_offset_27" [color="black"];
+    "_copy_to_user_1" [color="black"];
+    "test_ti_thread_flag_6" [color="black"];
+    "__cmpxchg_case_acq_32.constprop.0_6" [color="black"];
+    "__raw_spin_lock_irq_3" [color="black"];
+    "__raw_spin_unlock_irq_3" [color="black"];
+    "access_ok_6" [color="black"];
+    "____core____" [color="kernel"];
+    "__arch_copy_to_user" [color="black"];
+    "do_raw_spin_lock_3" [color="black"];
+    "queued_spin_lock_slowpath" [color="black"];
+    "__arm64_sys_rt_sigpending" [color="black"];
+    "queued_spin_lock_slowpath" -> "__cmpxchg_case_acq_32.constprop.0_6" [color="black"];
+    "queued_spin_lock_slowpath" -> "____core____" [color="black"];
+    "queued_spin_lock_slowpath" -> "__kern_my_cpu_offset_27" [color="black"];
+    "__arm64_sys_rt_sigpending" -> "__raw_spin_unlock_irq_3" [color="black"];
+    "__arm64_sys_rt_sigpending" -> "_copy_to_user_1" [color="black"];
+    "__arm64_sys_rt_sigpending" -> "__raw_spin_lock_irq_3" [color="black"];
+    "_copy_to_user_1" -> "__arch_copy_to_user" [color="black"];
+    "_copy_to_user_1" -> "access_ok_6" [color="black"];
+    "access_ok_6" -> "test_ti_thread_flag_6" [color="black"];
+    "__raw_spin_lock_irq_3" -> "do_raw_spin_lock_3" [color="black"];
+    "do_raw_spin_lock_3" -> "queued_spin_lock_slowpath" [color="black"];
+}
+

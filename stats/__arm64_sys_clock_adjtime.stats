@@ -1,0 +1,10 @@
+clockid_to_kclock,0
+__arm64_sys_clock_adjtime,11
+do_clock_adjtime,2
+__arch_copy_to_user,0
+memset,0
+Indirect call0,0
+__do_sys_clock_adjtime,10
+access_ok_11,0
+_copy_from_user_6,3
+__arch_copy_from_user,0

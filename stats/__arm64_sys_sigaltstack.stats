@@ -1,0 +1,10 @@
+_copy_from_user_2,4
+on_sig_stack,0
+memset,0
+access_ok_6,1
+__arm64_sys_sigaltstack,10
+do_sigaltstack.constprop.0,1
+_copy_to_user_1,3
+__arch_copy_from_user,0
+__arch_copy_to_user,0
+test_ti_thread_flag_6,0

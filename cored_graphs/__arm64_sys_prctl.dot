@@ -1,0 +1,14 @@
+digraph kerncollapsed {
+    "__arm64_sys_prctl" [color="black"];
+    "_copy_to_user_2" [color="black"];
+    "__arch_copy_to_user" [color="black"];
+    "security_task_prctl" [color="black"];
+    "Indirect call0" [color="black"];
+    "____core____" [color="kernel"];
+    "__arm64_sys_prctl" -> "_copy_to_user_2" [color="black"];
+    "__arm64_sys_prctl" -> "security_task_prctl" [color="black"];
+    "_copy_to_user_2" -> "____core____" [color="black"];
+    "_copy_to_user_2" -> "__arch_copy_to_user" [color="black"];
+    "security_task_prctl" -> "Indirect call0" [color="black"];
+}
+

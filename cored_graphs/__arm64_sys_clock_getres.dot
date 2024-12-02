@@ -1,0 +1,16 @@
+digraph kerncollapsed {
+    "__arm64_sys_clock_getres" [color="black"];
+    "Indirect call0" [color="black"];
+    "put_timespec64" [color="black"];
+    "_copy_to_user_5" [color="black"];
+    "__arch_copy_to_user" [color="black"];
+    "clockid_to_kclock" [color="black"];
+    "____core____" [color="kernel"];
+    "__arm64_sys_clock_getres" -> "put_timespec64" [color="black"];
+    "__arm64_sys_clock_getres" -> "clockid_to_kclock" [color="black"];
+    "__arm64_sys_clock_getres" -> "Indirect call0" [color="black"];
+    "put_timespec64" -> "_copy_to_user_5" [color="black"];
+    "_copy_to_user_5" -> "____core____" [color="black"];
+    "_copy_to_user_5" -> "__arch_copy_to_user" [color="black"];
+}
+

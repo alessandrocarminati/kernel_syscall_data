@@ -1,0 +1,4 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_restart_syscall"->"Indirect call0" [ edgeid = "1"]; 
+}

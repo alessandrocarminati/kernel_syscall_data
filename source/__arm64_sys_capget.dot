@@ -1,0 +1,6 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_capget"->"access_ok_4" [ edgeid = "1"]; 
+"__arm64_sys_capget"->"cap_validate_magic" [ edgeid = "2"]; 
+"cap_validate_magic"->"access_ok_4" [ edgeid = "3"]; 
+}

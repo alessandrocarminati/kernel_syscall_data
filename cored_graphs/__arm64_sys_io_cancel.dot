@@ -1,0 +1,8 @@
+digraph kerncollapsed {
+    "access_ok_30" [color="black"];
+    "____core____" [color="kernel"];
+    "__arm64_sys_io_cancel" [color="black"];
+    "__arm64_sys_io_cancel" -> "access_ok_30" [color="black"];
+    "access_ok_30" -> "____core____" [color="black"];
+}
+

@@ -1,0 +1,10 @@
+digraph kerncollapsed {
+    "access_ok_8" [color="black"];
+    "____core____" [color="kernel"];
+    "memset" [color="black"];
+    "__arm64_sys_sched_setattr" [color="black"];
+    "__arm64_sys_sched_setattr" -> "access_ok_8" [color="black"];
+    "__arm64_sys_sched_setattr" -> "memset" [color="black"];
+    "access_ok_8" -> "____core____" [color="black"];
+}
+

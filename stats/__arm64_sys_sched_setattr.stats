@@ -1,0 +1,4 @@
+__arm64_sys_sched_setattr,3
+access_ok_8,1
+memset,0
+test_ti_thread_flag_7,0

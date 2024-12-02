@@ -1,0 +1,3 @@
+access_ok_4,0
+cap_validate_magic,1
+__arm64_sys_capset,3

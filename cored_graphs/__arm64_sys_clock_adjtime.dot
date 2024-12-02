@@ -1,0 +1,24 @@
+digraph kerncollapsed {
+    "____core____" [color="kernel"];
+    "__arm64_sys_clock_adjtime" [color="black"];
+    "do_clock_adjtime" [color="black"];
+    "Indirect call0" [color="black"];
+    "access_ok_11" [color="black"];
+    "_copy_from_user_6" [color="black"];
+    "memset" [color="black"];
+    "__arch_copy_to_user" [color="black"];
+    "__do_sys_clock_adjtime" [color="black"];
+    "__arch_copy_from_user" [color="black"];
+    "__do_sys_clock_adjtime" -> "memset" [color="black"];
+    "__do_sys_clock_adjtime" -> "access_ok_11" [color="black"];
+    "__do_sys_clock_adjtime" -> "_copy_from_user_6" [color="black"];
+    "__do_sys_clock_adjtime" -> "do_clock_adjtime" [color="black"];
+    "__do_sys_clock_adjtime" -> "__arch_copy_to_user" [color="black"];
+    "_copy_from_user_6" -> "access_ok_11" [color="black"];
+    "_copy_from_user_6" -> "__arch_copy_from_user" [color="black"];
+    "_copy_from_user_6" -> "memset" [color="black"];
+    "do_clock_adjtime" -> "Indirect call0" [color="black"];
+    "do_clock_adjtime" -> "____core____" [color="black"];
+    "__arm64_sys_clock_adjtime" -> "__do_sys_clock_adjtime" [color="black"];
+}
+

@@ -1,0 +1,9 @@
+digraph kerncollapsed {
+    "__arm64_sys_capset" [color="black"];
+    "cap_validate_magic" [color="black"];
+    "____core____" [color="kernel"];
+    "__arm64_sys_capset" -> "cap_validate_magic" [color="black"];
+    "__arm64_sys_capset" -> "____core____" [color="black"];
+    "cap_validate_magic" -> "____core____" [color="black"];
+}
+

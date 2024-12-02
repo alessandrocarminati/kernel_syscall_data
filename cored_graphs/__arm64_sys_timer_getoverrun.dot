@@ -1,0 +1,23 @@
+digraph kerncollapsed {
+    "__raw_spin_lock_irqsave_17" [color="black"];
+    "__kern_my_cpu_offset_27" [color="black"];
+    "queued_spin_lock_slowpath" [color="black"];
+    "____core____" [color="kernel"];
+    "__cmpxchg_case_acq_32.constprop.0_6" [color="black"];
+    "__arm64_sys_timer_getoverrun" [color="black"];
+    "__raw_spin_unlock_irqrestore_14" [color="black"];
+    "__lock_timer" [color="black"];
+    "__posix_timers_find" [color="black"];
+    "do_raw_spin_lock_28" [color="black"];
+    "__lock_timer" -> "__raw_spin_unlock_irqrestore_14" [color="black"];
+    "__lock_timer" -> "__posix_timers_find" [color="black"];
+    "__lock_timer" -> "__raw_spin_lock_irqsave_17" [color="black"];
+    "__raw_spin_lock_irqsave_17" -> "do_raw_spin_lock_28" [color="black"];
+    "do_raw_spin_lock_28" -> "queued_spin_lock_slowpath" [color="black"];
+    "queued_spin_lock_slowpath" -> "____core____" [color="black"];
+    "queued_spin_lock_slowpath" -> "__kern_my_cpu_offset_27" [color="black"];
+    "queued_spin_lock_slowpath" -> "__cmpxchg_case_acq_32.constprop.0_6" [color="black"];
+    "__arm64_sys_timer_getoverrun" -> "__raw_spin_unlock_irqrestore_14" [color="black"];
+    "__arm64_sys_timer_getoverrun" -> "__lock_timer" [color="black"];
+}
+

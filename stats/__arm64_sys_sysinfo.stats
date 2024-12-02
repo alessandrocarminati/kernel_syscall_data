@@ -1,0 +1,13 @@
+ns_to_timespec64,0
+ktime_get_with_offset,3
+memset,0
+access_ok_7,0
+__arch_copy_to_user,0
+tk_clock_read,1
+__do_sys_sysinfo,11
+get_avenrun,0
+Indirect call0,0
+si_meminfo,0
+timekeeping_get_ns,2
+__arm64_sys_sysinfo,12
+_copy_to_user_2,2

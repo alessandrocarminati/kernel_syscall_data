@@ -1,0 +1,22 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_sched_getattr"->"access_ok_8" [ edgeid = "1"]; 
+"access_ok_8"->"test_ti_thread_flag_7" [ edgeid = "2"]; 
+"__arm64_sys_sched_getattr"->"find_process_by_pid" [ edgeid = "3"]; 
+"find_process_by_pid"->"find_task_by_vpid" [ edgeid = "4"]; 
+"find_task_by_vpid"->"task_active_pid_ns" [ edgeid = "5"]; 
+"find_task_by_vpid"->"find_task_by_pid_ns" [ edgeid = "6"]; 
+"find_task_by_pid_ns"->"pid_task" [ edgeid = "7"]; 
+"find_task_by_pid_ns"->"idr_find" [ edgeid = "8"]; 
+"idr_find"->"radix_tree_lookup" [ edgeid = "9"]; 
+"radix_tree_lookup"->"__radix_tree_lookup" [ edgeid = "10"]; 
+"__radix_tree_lookup"->"radix_tree_load_root" [ edgeid = "11"]; 
+"__arm64_sys_sched_getattr"->"get_params" [ edgeid = "12"]; 
+"get_params"->"__getparam_dl" [ edgeid = "13"]; 
+"__arm64_sys_sched_getattr"->"_copy_to_user_3" [ edgeid = "14"]; 
+"_copy_to_user_3"->"access_ok_8" [ edgeid = "15"]; 
+"_copy_to_user_3"->"__arch_copy_to_user" [ edgeid = "16"]; 
+"__arm64_sys_sched_getattr"->"security_task_getscheduler" [ edgeid = "17"]; 
+"security_task_getscheduler"->"Indirect call0" [ edgeid = "18"]; 
+"__arm64_sys_sched_getattr"->"memset" [ edgeid = "19"]; 
+}

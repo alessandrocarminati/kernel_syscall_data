@@ -1,0 +1,23 @@
+digraph kerncollapsed {
+    "_copy_from_user_2" [color="black"];
+    "__arm64_sys_sigaltstack" [color="black"];
+    "_copy_to_user_1" [color="black"];
+    "__arch_copy_to_user" [color="black"];
+    "test_ti_thread_flag_6" [color="black"];
+    "__arch_copy_from_user" [color="black"];
+    "memset" [color="black"];
+    "do_sigaltstack.constprop.0" [color="black"];
+    "access_ok_6" [color="black"];
+    "____core____" [color="kernel"];
+    "__arm64_sys_sigaltstack" -> "do_sigaltstack.constprop.0" [color="black"];
+    "__arm64_sys_sigaltstack" -> "_copy_from_user_2" [color="black"];
+    "__arm64_sys_sigaltstack" -> "_copy_to_user_1" [color="black"];
+    "_copy_from_user_2" -> "access_ok_6" [color="black"];
+    "_copy_from_user_2" -> "__arch_copy_from_user" [color="black"];
+    "_copy_from_user_2" -> "memset" [color="black"];
+    "access_ok_6" -> "test_ti_thread_flag_6" [color="black"];
+    "_copy_to_user_1" -> "access_ok_6" [color="black"];
+    "_copy_to_user_1" -> "__arch_copy_to_user" [color="black"];
+    "do_sigaltstack.constprop.0" -> "____core____" [color="black"];
+}
+

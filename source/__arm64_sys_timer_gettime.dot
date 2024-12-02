@@ -1,0 +1,19 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_timer_gettime"->"Indirect call0" [ edgeid = "1"]; 
+"__arm64_sys_timer_gettime"->"put_itimerspec64" [ edgeid = "2"]; 
+"put_itimerspec64"->"put_timespec64" [ edgeid = "3"]; 
+"put_timespec64"->"_copy_to_user_5" [ edgeid = "4"]; 
+"_copy_to_user_5"->"access_ok_10" [ edgeid = "5"]; 
+"_copy_to_user_5"->"__arch_copy_to_user" [ edgeid = "6"]; 
+"__arm64_sys_timer_gettime"->"__raw_spin_unlock_irqrestore_14" [ edgeid = "7"]; 
+"__arm64_sys_timer_gettime"->"__lock_timer" [ edgeid = "8"]; 
+"__lock_timer"->"__raw_spin_unlock_irqrestore_14" [ edgeid = "9"]; 
+"__lock_timer"->"__posix_timers_find" [ edgeid = "10"]; 
+"__lock_timer"->"__raw_spin_lock_irqsave_17" [ edgeid = "11"]; 
+"__raw_spin_lock_irqsave_17"->"do_raw_spin_lock_28" [ edgeid = "12"]; 
+"do_raw_spin_lock_28"->"queued_spin_lock_slowpath" [ edgeid = "13"]; 
+"queued_spin_lock_slowpath"->"__cmpwait_case_32_1" [ edgeid = "14"]; 
+"queued_spin_lock_slowpath"->"__kern_my_cpu_offset_27" [ edgeid = "15"]; 
+"queued_spin_lock_slowpath"->"__cmpxchg_case_acq_32.constprop.0_6" [ edgeid = "16"]; 
+}

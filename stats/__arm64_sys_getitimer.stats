@@ -1,0 +1,21 @@
+__hrtimer_get_remaining,10
+__arch_copy_to_user,0
+Indirect call0,0
+__cmpwait_case_32_1,0
+__raw_spin_lock_irqsave_15,5
+__arm64_sys_getitimer,27
+__raw_spin_unlock_irq_16,0
+put_itimerval,2
+__kern_my_cpu_offset_27,0
+do_raw_spin_lock_27,4
+__raw_spin_lock_irq_16,4
+hrtimer_active,1
+access_ok.constprop.0_1,0
+__raw_spin_unlock_irqrestore_12,0
+__cmpxchg_case_acq_32.constprop.0_6,0
+get_cpu_itimer,8
+ns_to_timespec64,0
+lock_hrtimer_base,7
+itimer_get_remtime,14
+thread_group_sample_cputime,0
+queued_spin_lock_slowpath,3

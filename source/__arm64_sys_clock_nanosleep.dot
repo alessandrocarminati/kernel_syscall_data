@@ -1,0 +1,11 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_clock_nanosleep"->"Indirect call0" [ edgeid = "1"]; 
+"__arm64_sys_clock_nanosleep"->"do_no_restart_syscall" [ edgeid = "2"]; 
+"__arm64_sys_clock_nanosleep"->"get_timespec64" [ edgeid = "3"]; 
+"get_timespec64"->"_copy_from_user_5" [ edgeid = "4"]; 
+"_copy_from_user_5"->"access_ok_10" [ edgeid = "5"]; 
+"_copy_from_user_5"->"__arch_copy_from_user" [ edgeid = "6"]; 
+"_copy_from_user_5"->"memset" [ edgeid = "7"]; 
+"__arm64_sys_clock_nanosleep"->"clockid_to_kclock" [ edgeid = "8"]; 
+}

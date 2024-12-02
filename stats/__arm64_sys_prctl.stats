@@ -1,0 +1,6 @@
+access_ok_7,0
+__arch_copy_to_user,0
+Indirect call0,0
+__arm64_sys_prctl,5
+_copy_to_user_2,2
+security_task_prctl,1

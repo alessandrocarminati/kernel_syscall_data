@@ -1,0 +1,2 @@
+__arm64_sys_getgroups,1
+access_ok.constprop.0,0

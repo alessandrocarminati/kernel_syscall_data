@@ -1,0 +1,30 @@
+digraph G {
+rankdir=LR; node [style=filled fillcolor=yellow]
+"__arm64_sys_sched_getaffinity"->"_copy_to_user_3" [ edgeid = "1"]; 
+"_copy_to_user_3"->"access_ok_8" [ edgeid = "2"]; 
+"access_ok_8"->"test_ti_thread_flag_7" [ edgeid = "3"]; 
+"_copy_to_user_3"->"__arch_copy_to_user" [ edgeid = "4"]; 
+"__arm64_sys_sched_getaffinity"->"sched_getaffinity" [ edgeid = "5"]; 
+"sched_getaffinity"->"__raw_spin_unlock_irqrestore_2" [ edgeid = "6"]; 
+"sched_getaffinity"->"__raw_spin_lock_irqsave_3" [ edgeid = "7"]; 
+"__raw_spin_lock_irqsave_3"->"arch_local_irq_save_1" [ edgeid = "8"]; 
+"__raw_spin_lock_irqsave_3"->"do_raw_spin_lock_9" [ edgeid = "9"]; 
+"do_raw_spin_lock_9"->"__cmpxchg_case_acq_32" [ edgeid = "10"]; 
+"do_raw_spin_lock_9"->"queued_spin_lock_slowpath" [ edgeid = "11"]; 
+"queued_spin_lock_slowpath"->"__cmpwait_case_32_1" [ edgeid = "12"]; 
+"queued_spin_lock_slowpath"->"__kern_my_cpu_offset_27" [ edgeid = "13"]; 
+"queued_spin_lock_slowpath"->"__cmpxchg_case_acq_32.constprop.0_6" [ edgeid = "14"]; 
+"sched_getaffinity"->"cpumask_and" [ edgeid = "15"]; 
+"cpumask_and"->"__bitmap_and" [ edgeid = "16"]; 
+"sched_getaffinity"->"find_process_by_pid" [ edgeid = "17"]; 
+"find_process_by_pid"->"find_task_by_vpid" [ edgeid = "18"]; 
+"find_task_by_vpid"->"task_active_pid_ns" [ edgeid = "19"]; 
+"find_task_by_vpid"->"find_task_by_pid_ns" [ edgeid = "20"]; 
+"find_task_by_pid_ns"->"pid_task" [ edgeid = "21"]; 
+"find_task_by_pid_ns"->"idr_find" [ edgeid = "22"]; 
+"idr_find"->"radix_tree_lookup" [ edgeid = "23"]; 
+"radix_tree_lookup"->"__radix_tree_lookup" [ edgeid = "24"]; 
+"__radix_tree_lookup"->"radix_tree_load_root" [ edgeid = "25"]; 
+"sched_getaffinity"->"security_task_getscheduler" [ edgeid = "26"]; 
+"security_task_getscheduler"->"Indirect call0" [ edgeid = "27"]; 
+}
